@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18A391" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Cartoon" representedClassName="Cartoon" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="roles" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Character" inverseName="cartoon_name" inverseEntity="Character" syncable="YES"/>
+    </entity>
+    <entity name="Character" representedClassName="Character" syncable="YES" codeGenerationType="class">
+        <attribute name="age" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isProtagonist" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="remark" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cartoon_name" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cartoon" inverseName="roles" inverseEntity="Cartoon" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Cartoon" positionX="-133.1171875" positionY="20.92578125" width="128" height="73"/>
+        <element name="Character" positionX="165.94140625" positionY="20.96484375" width="128" height="118"/>
+    </elements>
+</model>

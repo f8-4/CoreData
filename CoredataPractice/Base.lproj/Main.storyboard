@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoredataPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coredata学习" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zf6-KA-OVa">
+                                <rect key="frame" x="127" y="35" width="121" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qya-zo-FqS">
+                                <rect key="frame" x="15" y="77" width="75" height="30"/>
+                                <state key="normal" title="查询全部"/>
+                                <connections>
+                                    <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Krm-Cf-hUg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdY-dl-GGA">
+                                <rect key="frame" x="15" y="32" width="62" height="30"/>
+                                <state key="normal" title="删除全部"/>
+                                <connections>
+                                    <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Te-53-ORu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jli-Dx-XHf">
+                                <rect key="frame" x="329" y="32" width="31" height="30"/>
+                                <state key="normal" title="重置"/>
+                                <connections>
+                                    <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wbb-Nl-PZw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGp-7T-1NT">
+                                <rect key="frame" x="105" y="77" width="75" height="30"/>
+                                <state key="normal" title="分页查询"/>
+                                <connections>
+                                    <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TaB-Ii-nFi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utg-vC-cpg">
+                                <rect key="frame" x="195" y="77" width="75" height="30"/>
+                                <state key="normal" title="下一页"/>
+                                <connections>
+                                    <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UBx-2A-75V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0F-GX-jCC">
+                                <rect key="frame" x="285" y="77" width="75" height="30"/>
+                                <state key="normal" title="类别查询"/>
+                                <connections>
+                                    <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TI5-gA-YjJ"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YoV-ow-qvs">
+                                <rect key="frame" x="0.0" y="194" width="375" height="473"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiL-c3-x6J">
+                                <rect key="frame" x="15" y="122" width="75" height="30"/>
+                                <state key="normal" title="批量查询"/>
+                                <connections>
+                                    <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Va-FA-VgH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1N-pe-MUb">
+                                <rect key="frame" x="105" y="122" width="75" height="30"/>
+                                <state key="normal" title="模糊查询"/>
+                                <connections>
+                                    <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cmk-B7-1Rx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9x-ay-qlI">
+                                <rect key="frame" x="195" y="122" width="75" height="30"/>
+                                <state key="normal" title="条件查询"/>
+                                <connections>
+                                    <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uP0-PX-p49"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6X-EG-y1i">
+                                <rect key="frame" x="285" y="122" width="75" height="30"/>
+                                <state key="normal" title="精确查询"/>
+                                <connections>
+                                    <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7YP-E1-n2c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceA-dW-Cze">
+                                <rect key="frame" x="15" y="160" width="108.5" height="30"/>
+                                <state key="normal" title="姓名升序"/>
+                                <connections>
+                                    <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GbH-Wu-3NN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6m-sb-mXo">
+                                <rect key="frame" x="251.5" y="160" width="108.5" height="30"/>
+                                <state key="normal" title="年龄升序"/>
+                                <connections>
+                                    <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="efb-DY-a7A"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="共查询到100条数据" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHH-Bk-qAg">
+                                <rect key="frame" x="133.5" y="160" width="108" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="h9x-ay-qlI" firstAttribute="leading" secondItem="E1N-pe-MUb" secondAttribute="trailing" constant="15" id="35O-1U-2cy"/>
+                            <constraint firstItem="b6X-EG-y1i" firstAttribute="width" secondItem="oiL-c3-x6J" secondAttribute="width" id="37n-iG-18c"/>
+                            <constraint firstItem="b6X-EG-y1i" firstAttribute="leading" secondItem="h9x-ay-qlI" secondAttribute="trailing" constant="15" id="6Bi-yM-WgM"/>
+                            <constraint firstItem="ceA-dW-Cze" firstAttribute="top" secondItem="oiL-c3-x6J" secondAttribute="bottom" constant="8" id="6H8-sr-SSq"/>
+                            <constraint firstItem="YoV-ow-qvs" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6fE-dc-oUJ"/>
+                            <constraint firstItem="YoV-ow-qvs" firstAttribute="top" secondItem="y6m-sb-mXo" secondAttribute="bottom" constant="4" id="7Jc-TT-gaI"/>
+                            <constraint firstItem="eGp-7T-1NT" firstAttribute="centerY" secondItem="Qya-zo-FqS" secondAttribute="centerY" id="8IF-Ku-QaY"/>
+                            <constraint firstItem="YoV-ow-qvs" firstAttribute="top" secondItem="ceA-dW-Cze" secondAttribute="bottom" constant="4" id="8RJ-Y5-tsE"/>
+                            <constraint firstItem="Jli-Dx-XHf" firstAttribute="centerY" secondItem="sdY-dl-GGA" secondAttribute="centerY" id="BUU-4P-Lu2"/>
+                            <constraint firstItem="Zf6-KA-OVa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="Gna-VE-YPj"/>
+                            <constraint firstItem="Zf6-KA-OVa" firstAttribute="centerY" secondItem="sdY-dl-GGA" secondAttribute="centerY" id="IQc-wB-6pr"/>
+                            <constraint firstItem="sdY-dl-GGA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="JE0-lA-nLk"/>
+                            <constraint firstItem="eGp-7T-1NT" firstAttribute="width" secondItem="Qya-zo-FqS" secondAttribute="width" id="JWg-NC-9Pp"/>
+                            <constraint firstItem="utg-vC-cpg" firstAttribute="leading" secondItem="eGp-7T-1NT" secondAttribute="trailing" constant="15" id="Jp1-mC-lJa"/>
+                            <constraint firstItem="iHH-Bk-qAg" firstAttribute="top" secondItem="ceA-dW-Cze" secondAttribute="top" id="L9k-6N-oAg"/>
+                            <constraint firstItem="Qya-zo-FqS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="LDc-hq-jnh"/>
+                            <constraint firstItem="oiL-c3-x6J" firstAttribute="top" secondItem="Qya-zo-FqS" secondAttribute="bottom" constant="15" id="Oe9-b0-L2m"/>
+                            <constraint firstItem="E1N-pe-MUb" firstAttribute="width" secondItem="oiL-c3-x6J" secondAttribute="width" id="Oni-Mn-jvM"/>
+                            <constraint firstItem="oiL-c3-x6J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Qng-uP-FoO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y6m-sb-mXo" secondAttribute="trailing" constant="15" id="Qte-nS-zDt"/>
+                            <constraint firstItem="E1N-pe-MUb" firstAttribute="leading" secondItem="oiL-c3-x6J" secondAttribute="trailing" constant="15" id="S3f-Rh-ezA"/>
+                            <constraint firstItem="iHH-Bk-qAg" firstAttribute="leading" secondItem="ceA-dW-Cze" secondAttribute="trailing" constant="10" id="Ske-Ox-lyS"/>
+                            <constraint firstItem="h0F-GX-jCC" firstAttribute="centerY" secondItem="Qya-zo-FqS" secondAttribute="centerY" id="Spe-Vr-4JI"/>
+                            <constraint firstItem="y6m-sb-mXo" firstAttribute="leading" secondItem="iHH-Bk-qAg" secondAttribute="trailing" constant="10" id="T5w-9D-ph7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b6X-EG-y1i" secondAttribute="trailing" constant="15" id="V7J-iS-KyX"/>
+                            <constraint firstItem="h9x-ay-qlI" firstAttribute="width" secondItem="oiL-c3-x6J" secondAttribute="width" id="X8B-f5-gZr"/>
+                            <constraint firstItem="YoV-ow-qvs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XQx-on-McT"/>
+                            <constraint firstItem="E1N-pe-MUb" firstAttribute="centerY" secondItem="oiL-c3-x6J" secondAttribute="centerY" id="Xa1-c4-E5z"/>
+                            <constraint firstItem="Jli-Dx-XHf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Zf6-KA-OVa" secondAttribute="trailing" constant="15" id="Z87-TH-XUU"/>
+                            <constraint firstItem="h0F-GX-jCC" firstAttribute="width" secondItem="Qya-zo-FqS" secondAttribute="width" id="a35-Me-LEV"/>
+                            <constraint firstItem="iHH-Bk-qAg" firstAttribute="bottom" secondItem="ceA-dW-Cze" secondAttribute="bottom" id="aB1-ce-vW2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h0F-GX-jCC" secondAttribute="trailing" constant="15" id="bBn-UM-tog"/>
+                            <constraint firstItem="h9x-ay-qlI" firstAttribute="centerY" secondItem="oiL-c3-x6J" secondAttribute="centerY" id="cG4-a3-jJE"/>
+                            <constraint firstItem="utg-vC-cpg" firstAttribute="width" secondItem="Qya-zo-FqS" secondAttribute="width" id="cvo-bv-3TQ"/>
+                            <constraint firstItem="iHH-Bk-qAg" firstAttribute="width" secondItem="ceA-dW-Cze" secondAttribute="width" id="dOa-6T-Pgu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jli-Dx-XHf" secondAttribute="trailing" constant="15" id="eM1-l1-UuG"/>
+                            <constraint firstItem="YoV-ow-qvs" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ezP-1O-JW1"/>
+                            <constraint firstItem="Zf6-KA-OVa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fmE-Xc-Isn"/>
+                            <constraint firstItem="y6m-sb-mXo" firstAttribute="top" secondItem="b6X-EG-y1i" secondAttribute="bottom" constant="8" id="g6y-L7-YBb"/>
+                            <constraint firstItem="eGp-7T-1NT" firstAttribute="leading" secondItem="Qya-zo-FqS" secondAttribute="trailing" constant="15" id="lgg-cn-oEw"/>
+                            <constraint firstItem="b6X-EG-y1i" firstAttribute="centerY" secondItem="oiL-c3-x6J" secondAttribute="centerY" id="mBL-aa-orA"/>
+                            <constraint firstItem="Zf6-KA-OVa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sdY-dl-GGA" secondAttribute="trailing" constant="15" id="nbU-fy-h70"/>
+                            <constraint firstItem="h0F-GX-jCC" firstAttribute="leading" secondItem="utg-vC-cpg" secondAttribute="trailing" constant="15" id="ntg-0y-36o"/>
+                            <constraint firstItem="Qya-zo-FqS" firstAttribute="top" secondItem="Zf6-KA-OVa" secondAttribute="bottom" constant="18" id="nxq-0Q-jUX"/>
+                            <constraint firstItem="ceA-dW-Cze" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="uEj-z7-H3w"/>
+                            <constraint firstItem="y6m-sb-mXo" firstAttribute="width" secondItem="ceA-dW-Cze" secondAttribute="width" id="uru-cf-Ngk"/>
+                            <constraint firstItem="utg-vC-cpg" firstAttribute="centerY" secondItem="Qya-zo-FqS" secondAttribute="centerY" id="zg2-Lh-vHn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ageSortLabel" destination="y6m-sb-mXo" id="4rC-c2-ymY"/>
+                        <outlet property="catogaryFindBtn" destination="h0F-GX-jCC" id="n6L-Wu-Tib"/>
+                        <outlet property="conditionFindBtn" destination="h9x-ay-qlI" id="Iz2-8y-2Qz"/>
+                        <outlet property="deleteAllBtn" destination="sdY-dl-GGA" id="9Go-Ol-Jkx"/>
+                        <outlet property="findAllBtn" destination="Qya-zo-FqS" id="DEr-XE-rZf"/>
+                        <outlet property="likeFindBtn" destination="E1N-pe-MUb" id="q7z-b3-Oad"/>
+                        <outlet property="manyFindBtn" destination="oiL-c3-x6J" id="ciE-3b-qhc"/>
+                        <outlet property="matchFindBtn" destination="b6X-EG-y1i" id="bF8-Wv-J17"/>
+                        <outlet property="nameSortLabel" destination="ceA-dW-Cze" id="3C4-cd-bg6"/>
+                        <outlet property="nextPageBtn" destination="utg-vC-cpg" id="ZKM-xE-hIk"/>
+                        <outlet property="pageFindBtn" destination="eGp-7T-1NT" id="Mdm-67-uDP"/>
+                        <outlet property="resetBtn" destination="Jli-Dx-XHf" id="d30-cC-MSf"/>
+                        <outlet property="resultLabel" destination="iHH-Bk-qAg" id="onw-Vq-J9x"/>
+                        <outlet property="tableView" destination="YoV-ow-qvs" id="BTE-wD-9yR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="131.78410794602701"/>
+        </scene>
+    </scenes>
+</document>
